@@ -193,25 +193,28 @@ button {
   justify-content: center;
 }
 
-/* Estilos para la página de login y registro */
+/* Estilos base para la página de login y registro */
 .loginsignup {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80vh;
+  min-height: 100vh; /* Cambié a min-height para que el contenido pueda crecer */
   background: #f9f2ec;
-  padding-top: 100px;
+  padding: 20px;
+  box-sizing: border-box; /* Agregado para evitar problemas de desbordamiento */
 }
 
 /* Contenedor para los campos de formulario y botones en login y registro */
 .loginsignup-container {
-  width: 580px;
-  height: auto;
+  width: 100%; /* Cambiado a ancho del 100% */
+  max-width: 580px; /* Agregado un ancho máximo */
   background: white;
-  margin: auto;
-  padding: 40px 60px;
+  margin: 20px;
+  padding: 40px 20px; /* Ajustado el espaciado interior */
+  box-sizing: border-box; /* Agregado para evitar problemas de desbordamiento */
 }
+
 
 .loginsignup-container h1 {
   margin: 20px 0px;
@@ -227,24 +230,24 @@ button {
 }
 
 .loginsignup-fields input {
-  height: 72px;
-  width: 100%;
+  width: auto;
   padding-left: 20px;
   border: 1px solid #c9c9c9;
   outline: none;
   color: #5c5c5c;
-  font-size: 18px;
+  height: 48px; 
+  font-size: 16px; 
 }
 
 /* Botones principales en las páginas de login y registro */
 .loginsignup-container button {
-  width: 580px;
-  height: 72px;
+  width: 100%;
+  height: 48px; 
+  margin-top: 20px;
+  font-size: 20px; 
   color: white;
   background: #803830;
-  margin-top: 30px;
   border: none;
-  font-size: 24px;
   font-weight: 500;
   cursor: pointer;
   margin-right: 30px;
@@ -254,7 +257,7 @@ button {
 .loginsignup-login,
 .loginsignup-agree {
   color: #5c5c5c;
-  font-size: 18px;
+  font-size: 16px; 
   margin-top: 20px;
 }
 
@@ -278,37 +281,39 @@ button {
 }
 
 .loginsignup-logo img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
 }
 
 /* Contenedor para el formulario de carga de productos */
 .admin-container {
-  width: 580px;
-  height: auto;
+  width: 100%; 
+  max-width: 800px; 
   background: white;
-  margin: auto;
-  padding: 40px 60px;
+  margin: 20px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-size: 20px;
 }
 
 #successMessage,
 #loginFailedMessage,
 #loginSuccessMessage {
-  width: fit-content;
-  position: absolute;
-  align-items: center;
+  width: 100%;
   text-align: center;
   padding: 20px;
   background-color: white;
   color: #9E6D5E;
   border-radius: 5px;
   margin-top: 20px;
-  font-size: 30px;
-  padding: 60px;
+  font-size: 20px; 
+  padding: 20px;
 }
 
 #successMessage a,
 #loginFailedMessage a,
 #loginSuccessMessage a {
+  display: block; 
   padding-top: 10px;
   font-size: 20px;
   color: #803830;

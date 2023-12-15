@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <title>Registro</title>
+</head>
+
+<body>
+
+    <div class="loginsignup">
+        <div class="loginsignup-container">
+            <h1 id="state">Regístrate</h1>
+            <div class="loginsignup-fields">
+                <input type="text" placeholder="Nombre" name="firstname" id="firstname" required />
+                <input type="text" placeholder="Apellido" name="lastname" id="lastname" required />
+                <input type="email" placeholder="Correo electrónico" name="email" id="email" required />
+                <input type="password" placeholder="Contraseña" name="password" id="password" required />
+                <input type="text" placeholder="NIF" name="nif" id="nif" required />
+                <input type="text" placeholder="Dirección" name="address" id="address" required />
+                <input type="tel" placeholder="Teléfono" name="phone" id="phone" required />
+            </div>
+
+            <button onclick="register()">Registrarse</button>
+
+            <p class="loginsignup-login">¿Ya tienes una cuenta? <span onclick="redirectToLogin()">Inicia
+                    sesión aquí</span></p>
+
+            <div class="loginsignup-logo">
+                <a href="/">
+                    <img src="./images/Logo.png" alt="Logotipo">
+                </a>
+            </div>
+        </div>
+        <div id="successMessage" style="display: none;">
+            Cliente registrado con éxito.<br/> <a href="/">Volver a la home</a>
+            <div>
+                <img class="logo-hidden-message" src="./images/Logo.png" alt="Logotipo" style="margin-top: 20px; width: 150px;"/> <!-- Ajusta la ruta y el estilo según sea necesario -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

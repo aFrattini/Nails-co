@@ -1,0 +1,445 @@
+/* Estilos básicos de reset y configuración global */
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #f9f2ec;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #444444;
+}
+
+/* Estilos genéricos para botones, aplicables a todos los botones de la aplicación */
+button {
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+/* Estilos para la barra de navegación */
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Alineación y espaciado de botones en la barra de navegación */
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+/* Estilos específicos para botones dentro de la barra de navegación */
+.login,
+.button-checkout {
+  background-color: white;
+  color: black;
+  border: 2px solid #803830;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+/* Efectos de hover para botones de login y checkout */
+.login:hover,
+.button-checkout:hover {
+  background-color: #9E6D5E;
+  color: white;
+}
+
+/* Estilos para el contenido principal donde se listan los productos */
+.page-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 60px;
+}
+
+/* Estilos para el contenedor individual de cada producto */
+.product-container {
+  border-radius: 20px;
+  margin: 10px;
+  padding: 2px 16px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.product-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product-container img {
+  width: 300px;
+}
+
+.product-container h1 {
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.product-container h3 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Botones para agregar productos al carrito */
+.button-add {
+  background-color: white;
+  color: black;
+  border: 2px solid #9E6D5E;
+  transition-duration: 0.4s;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+
+.button-add:hover {
+  background-color: #9E6D5E;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para botones deshabilitados (sin stock) */
+.button-add.disabled {
+  background-color: white;
+  color: black;
+  border: 2px solid #9e9e9e;
+  transition-duration: 0.4s;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+
+.button-add.disabled:hover {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+/* Estilos para el banner principal en la home */
+.banner-home {
+  height: 100vh;
+  background: linear-gradient(180deg, #C4AAA2, #e1ffea22 60%);
+  display: flex;
+}
+
+/* Estilos para la sección izquierda del banner */
+.banner-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 100px;
+  line-height: 1.1;
+}
+
+.banner-left p {
+  color: #171717;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.banner-left h2 {
+  color: #090909;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* Estilos para el botón dentro del banner */
+.banner-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 310px;
+  height: 70px;
+  border-radius: 75px;
+  margin-top: 30px;
+  background: #803830;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.banner-nail-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-nail-icon img {
+  width: 105px;
+}
+
+/* Estilos para la sección derecha del banner */
+.banner-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para la página de login y registro */
+.loginsignup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  background: #f9f2ec;
+  padding-top: 100px;
+}
+
+/* Contenedor para los campos de formulario y botones en login y registro */
+.loginsignup-container {
+  width: 580px;
+  height: auto;
+  background: white;
+  margin: auto;
+  padding: 40px 60px;
+}
+
+.loginsignup-container h1 {
+  margin: 20px 0px;
+  color: #803830;
+}
+
+/* Estilos para los campos de formulario en login y registro */
+.loginsignup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-top: 30px;
+}
+
+.loginsignup-fields input {
+  height: 72px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 18px;
+}
+
+/* Botones principales en las páginas de login y registro */
+.loginsignup-container button {
+  width: 580px;
+  height: 72px;
+  color: white;
+  background: #803830;
+  margin-top: 30px;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+/* Estilos para el texto de cambio a la página de login o registro */
+.loginsignup-login,
+.loginsignup-agree {
+  color: #5c5c5c;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.loginsignup-login span,
+.loginsignup-agree span {
+  color: #803830;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loginsignup-login span:hover,
+.loginsignup-agree span:hover {
+  text-decoration: underline;
+}
+
+
+/* Logo en las páginas de login y registro */
+.loginsignup-logo {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.loginsignup-logo img {
+  width: 300px;
+}
+
+/* Contenedor para el formulario de carga de productos */
+.admin-container {
+  width: 580px;
+  height: auto;
+  background: white;
+  margin: auto;
+  padding: 40px 60px;
+}
+
+#successMessage,
+#loginFailedMessage,
+#loginSuccessMessage {
+  width: fit-content;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: #9E6D5E;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 30px;
+  padding: 60px;
+}
+
+#successMessage a,
+#loginFailedMessage a,
+#loginSuccessMessage a {
+  padding-top: 10px;
+  font-size: 20px;
+  color: #803830;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+.admin-container h1 {
+  margin: 20px 0px;
+  color: #803830;
+}
+
+.admin-container button {
+  width: 580px;
+  height: 72px;
+  color: white;
+  background: #803830;
+  margin-top: 30px;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 30px;
+}
+#productSuccessMessage {
+  text-align: center;
+}
+
+#productSuccessMessage p{
+  font-size: 30px;
+  }
+
+#productSuccessMessage a{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+  color: #803830;
+  font-weight: 600;
+  cursor: pointer;
+  }
+
+.logo-hidden-message {
+  padding-top: 40px;
+  background-color: white;
+}
+
+/* Estilos para el contenedor del carrito */
+.cart-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cart-container h2 {
+  color: #803830;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.cart-container h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la tabla de productos en el carrito */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para las filas de productos en el carrito */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px;
+  border-color: #090909;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form button {
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+}
+
+.login-form button {
+  background-color: white;
+  color: black;
+  width: auto;
+  border: 2px solid #803830;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.login-form button:hover {
+  background-color: #9E6D5E;
+  color: white;
+}
+
+.total {
+  text-align: right;
+  border-top: 1px solid #090909;
+}
+
+
+
+

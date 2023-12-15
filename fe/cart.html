@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Carrito de Compras</title>
+    <script src="scripts.js"></script>
+
+</head>
+
+<body onload="loadCartDetails()">
+
+    <div id="cartDetails" class="cart-container">
+        <h2>Detalle del Pedido</h2>
+        <div id="cartItems" class="cart-items">
+            <!-- Los productos del carrito se cargarán aquí -->
+        </div>
+        <div id="total" class="total">Total: $0</div>
+        <div>
+            <h3>Inicie sesión para realizar la compra:</h3>
+        </div>
+        <div class="login-form">
+            <input type="email" id="loginEmail" placeholder="Correo electrónico" required />
+            <input type="password" id="loginPassword" placeholder="Contraseña" required />
+            <button onclick="verifyUser()">Confirmar compra</button>
+        </div>
+        <p class="loginsignup-login">¿No estás registrado? <span onclick="redirectToRegister()">Regístrate
+                aquí</span></p>
+        <p class="loginsignup-login">Volver a la <span onclick="redirectToHome()">Home</span></p>
+    </div>
+
+
+
+</body>
+
+</html>

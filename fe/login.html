@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <div class="loginsignup">
+        <div class="loginsignup-container">
+            <h1 id="state">Iniciar sesión</h1>
+            <div class="loginsignup-fields">
+                <input type="email" placeholder="Correo electrónico" name="email" id="email" />
+                <input type="password" placeholder="Contraseña" name="password" id="password" />
+            </div>
+
+            <button onclick="login()">Iniciar Sesión</button>
+
+            <p class="loginsignup-login">¿No estás registrado? <span onclick="redirectToRegister()">Regístrate
+                    aquí</span></p>
+
+            <div class="loginsignup-logo">
+                <a href="/">
+                    <img src="./images/Logo.png" alt="Logotipo">
+                </a>
+            </div>
+           
+        </div>
+        <div id="loginFailedMessage" style="display: none;">
+            Cliente no registrado. <span onclick="redirectToRegister()">Haga click <a href="/register">aquí</a> para registrarse.</span>
+            <div>
+                <img class="logo-hidden-message" src="./images/Logo.png" alt="Logotipo" style="margin-top: 20px; width: 150px;"/> <!-- Ajusta la ruta y el estilo según sea necesario -->
+            </div>
+        </div>
+        <div id="loginSuccessMessage" style="display: none;">
+            Sesión iniciada correctamente.<br/> <a href="/">Volver a la home</a> 
+            <div>
+                <img class="logo-hidden-message" src="./images/Logo.png" alt="Logotipo" style="margin-top: 20px; width: 150px;"/> <!-- Ajusta la ruta y el estilo según sea necesario -->
+            </div>
+        </div>
+        
+    </div>
+
+
+</body>
+
+</html>
